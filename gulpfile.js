@@ -48,6 +48,11 @@ gulp.task('extras', function () {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('processing', function () {
+  return gulp.src(['app/scripts/*.pde'], {dot: true})
+    .pipe(gulp.dest('dist/scripts'));
+});
+
 gulp.task('clean', function (cb) {
   return $.cache.clearAll(cb, function() {
     return rimraf('.tmp', function () {
@@ -101,6 +106,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
     'app/*.html',
     '.tmp/styles/**/*.css',
     'app/scripts/**/*.js',
+    'app/scripts/**/*.pde',
     'app/images/**/*'
   ]).on('change', $.livereload.changed);
 
@@ -108,7 +114,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
   gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], function () {
+gulp.task('build', ['html', 'images', 'fonts', 'extras', 'processing'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
@@ -162,6 +168,7 @@ gulp.task('test-server', function() {
 
   gulp.watch([
     'app/scripts/**/*.js',
+    'app/scripts/**/*.pde',
     'test/spec/**/*.js'
   ]).on('change', $.livereload.changed);
 
