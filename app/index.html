@@ -22,8 +22,40 @@
     <!-- endbuild -->
   </head>
   <body>
+    <div class="container">
 
-    <canvas data-processing-sources="scripts/woven.pde"></canvas>
+      <header>
+        <h1>Processing Practice</h1>
+        <span>
+          by Jess Scheuring
+        </span>
+      </header>
+
+      <main>
+        <section class="woven">
+          <div class="description">
+            <h2>Woven</h2>
+            <p>
+              A woven design: my first attempt at writing custom Processing code
+            </p>
+          </div>
+          <canvas data-processing-sources="scripts/woven.pde"></canvas>
+        </section>
+        <section class="walker">
+          <div class="description">
+            <h2>Walker - Nature Of Code 1.3</h2>
+            <p>
+              A "walker" pixel, that walks randomly in any cardinal direction. There
+              is a 50% chance the pixel will move towards the mouse instead of in a
+              random direction.
+            </p>
+          </div>
+          <canvas data-processing-sources="scripts/walker.pde"></canvas>
+        </section>
+
+      </main>
+
+    </div> <!--container-->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

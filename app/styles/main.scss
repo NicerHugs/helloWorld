@@ -5,22 +5,39 @@
 // Custom Styles
 body {
   background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 80%;
+}
+
+header {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+section {
+  border-bottom: solid 1px #000;
+  padding: rem(30) 0;
+
+  &:first-of-type {
+    margin-top: rem(30);
   }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.description {
+  float: left;
+  padding: 0 rem(30) 0 0;
+  width: rem(570);
 }
