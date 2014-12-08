@@ -12,7 +12,7 @@
 
     populate: function($el) {
       var id = $el.attr('id');
-      $.get('../scripts/' + id + '.pde', function(data) {
+      $.get('scripts/' + id + '.pde', function(data) {
         $el.html(data);
       });
     }
