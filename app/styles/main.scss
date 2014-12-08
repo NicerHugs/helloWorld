@@ -1,8 +1,7 @@
- // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
-@import '../../bower_components/neat/app/assets/stylesheets/neat';
+@import 'pretty';
 
-// Custom Styles
+
 body {
   background: #fafafa;
   color: #333;
@@ -25,11 +24,10 @@ h2 {
 
 section {
   border-bottom: solid 1px #000;
+  height: rem(460);
+  margin-top: rem(30);
+  overflow: hidden;
   padding: rem(30) 0;
-
-  &:first-of-type {
-    margin-top: rem(30);
-  }
 
   &:last-of-type {
     border-bottom: 0;

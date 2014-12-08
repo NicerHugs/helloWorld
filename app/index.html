@@ -20,8 +20,11 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css"></script>
   </head>
+
   <body>
+
     <div class="container">
 
       <header>
@@ -38,6 +41,8 @@
             <p>
               A woven design: my first attempt at writing custom Processing code
             </p>
+            <pre class="prettyprint linenums" id="woven">
+            </pre>
           </div>
           <canvas data-processing-sources="scripts/woven.pde"></canvas>
         </section>
@@ -45,10 +50,12 @@
           <div class="description">
             <h2>Walker - Nature Of Code 1.3</h2>
             <p>
-              A "walker" pixel, that walks randomly in any cardinal direction. There
-              is a 50% chance the pixel will move towards the mouse instead of in a
-              random direction.
+              A "walking" pixel, that moves randomly in any cardinal direction,
+              with a 50% chance the pixel will move towards the mouse instead of
+              randomly.
             </p>
+            <pre class="prettyprint linenums" id="walker">
+            </pre>
           </div>
           <canvas data-processing-sources="scripts/walker.pde"></canvas>
         </section>
